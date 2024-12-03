@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Artesanías Wayuu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Tienda Wayuu</h1>
+            </div>
+            <div class="nav-menu">
+                <button id="btn-inicio" onclick="window.location.href='index.html'" class="nav-link">Inicio</button>
+                <div id="carrito-icon" class="carrito-icon" onclick="mostrarCarrito()">
+                    <iconify-icon icon="mdi:cart"></iconify-icon>
+                    <span id="carrito-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="nav-search">
+            <input type="text" id="barra-busqueda" class="btn-busqueda" placeholder="Buscar artesanías...">
+            <select class="btn-limpiar-filtros" id="filtro-categoria">
+                <option value="">Todas las categorías</option>
+                <option value="mochilas">Mochilas</option>
+                <option value="ruanas">Ruanas</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+            <select class="btn-limpiar-filtros" id="filtro-precio">
+                <option value="">Cualquier precio</option>
+                <option value="0-50000">Hasta $50,000</option>
+                <option value="50000-150000">$50,000 - $150,000</option>
+                <option value="150000-300000">Más de $150,000</option>
+            </select>
+            <select class="btn-limpiar-filtros" id="filtro-disponibilidad">
+                <option value="">Todos</option>
+                <option value="disponible">Disponible</option>
+                <option value="ultimas-unidades">Últimas unidades</option>
+            </select>
+        </section>
+
+        <section id="productos" class="grid-productos">
+            <!-- Los productos se generan dinámicamente -->
+        </section>
+    </main>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal-carrito')">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="carrito-contenido"></div>
+            <div class="carrito-resumen">
+                <div class="carrito-total">
+                    Total: <span id="carrito-total">0</span> COP
+                </div>
+                <button id="btn-proceder-pago" class="btn-proceder-pago">
+                    Proceder al Pago
+                </button>
+                <button id="btn-vaciar-carrito">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Artesanías Wayuu - Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

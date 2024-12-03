@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choles Tegidos - Artesanías Wayuu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+    <div id="loader-container">
+        <div class="loom-illustration">
+            <div class="thread thread-1"></div>
+            <div class="thread thread-2"></div>
+            <div class="thread thread-3"></div>
+        </div>
+        <div class="thread-loader"></div>
+        <div class="loader-text">Choles Tegidos</div>
+        <div class="loader-subtext">Tejiendo historias, hilando tradiciones...</div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Choles Tegidos</h1>
+            </div>
+            <div class="nav-menu">
+                <button id="btn-tienda" onclick="window.location.href='tienda.html'" class="nav-link">Tienda</button>
+                <div id="carrito-icon" class="carrito-icon" onclick="mostrarCarrito()">
+                    <iconify-icon icon="mdi:cart"></iconify-icon>
+                    <span id="carrito-count">0</span>
+                </div>
+                <div id="lista-deseos-icon" class="lista-deseos-icon" onclick="mostrarListaDeseos()">
+                    <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                    <span id="lista-deseos-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="section">
+            <div class="carrusel-productos">
+                <div class="carrusel-container">
+                    <!-- Contenido del carrusel generado dinámicamente -->
+                </div>
+                <div class="carrusel-control">
+                    <button class="carrusel-prev">&#10094;</button>
+                    <button class="carrusel-next">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-promociones">
+            <h2>Promociones Especiales</h2>
+            <div id="productos-promocion" class="grid-productos">
+                <!-- Productos en promoción generados dinámicamente -->
+            </div>
+        </section>
+
+        <section class="seccion-informacion">
+            <h2>Descubre la Magia Wayuu</h2>
+            <p>Cada pieza está tejida a mano con técnicas ancestrales que reflejan la cultura y el arte de La Guajira, Colombia.</p>
+            <button onclick="window.location.href='tienda.html'" class="btn-comprar-ya">
+                Ver nuestra colección completa
+            </button>
+        </section>
+    </main>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal-carrito')">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="carrito-contenido"></div>
+            <div class="carrito-resumen">
+                <div class="carrito-total">
+                    Total: <span id="carrito-total">0</span> COP
+                </div>
+                <button id="btn-proceder-pago" class="btn-proceder-pago">
+                    Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-lista-deseos" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal-lista-deseos')">&times;</span>
+            <h2>Lista de Deseos</h2>
+            <div id="lista-deseos"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Choles Tegidos - Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
